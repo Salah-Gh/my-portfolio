@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Archivo:wght@300;400;500;600;700&display=swap');
-        
+
 :root {
     --primary: #00ffff;
     --secondary: #ff00ff;
@@ -24,6 +24,7 @@ body {
     cursor: none;
 }
 
+/* Custom Cursor */
 .cursor {
     width: 20px;
     height: 20px;
@@ -49,6 +50,7 @@ body {
     mix-blend-mode: difference;
 }
 
+/* Background Effects */
 .bg-grid {
     position: fixed;
     top: 0;
@@ -75,6 +77,7 @@ body {
     z-index: 1;
 }
 
+/* Navigation */
 nav {
     position: fixed;
     top: 0;
@@ -238,6 +241,7 @@ nav {
     left: 100%;
 }
 
+/* Scroll Indicator */
 .scroll-indicator {
     position: absolute;
     bottom: 3rem;
@@ -270,6 +274,7 @@ nav {
     50% { transform: translateY(20px); opacity: 0; }
 }
 
+/* Section Styles */
 section {
     min-height: 100vh;
     padding: 8rem 5%;
@@ -294,6 +299,7 @@ section {
     margin-bottom: 4rem;
 }
 
+/* About Section */
 .about-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -354,6 +360,7 @@ section {
     letter-spacing: 1px;
 }
 
+/* Skills Section */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -402,6 +409,7 @@ section {
     transform: translateY(-2px);
 }
 
+/* Projects Section */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -413,24 +421,23 @@ section {
     border-radius: 15px;
     overflow: hidden;
     border: 1px solid rgba(0, 255, 255, 0.1);
-    transition: transform 0.3s;
+    transition: transform 0.3s, border-color 0.3s;
     position: relative;
 }
 
 .project-card:hover {
-    transform: translateY(-15px);
+    transform: translateY(-10px);
     border-color: var(--primary);
 }
 
 .project-image {
-    height: 250px;
+    height: 200px;
     background: linear-gradient(135deg, rgba(0, 255, 255, 0.2), rgba(255, 0, 255, 0.2));
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 3rem;
-    color: var(--primary);
+    font-size: 4rem;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.1);
 }
 
 .project-content {
@@ -466,6 +473,13 @@ section {
     color: var(--secondary);
 }
 
+.project-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .project-link {
     color: var(--primary);
     text-decoration: none;
@@ -474,12 +488,147 @@ section {
     align-items: center;
     gap: 0.5rem;
     transition: gap 0.3s;
+    padding: 0.5rem 0;
 }
 
 .project-link:hover {
     gap: 1rem;
 }
 
+.project-link svg {
+    transition: transform 0.3s;
+}
+
+.project-link:hover svg {
+    transform: translateX(5px);
+}
+
+.btn-show-more {
+    background: transparent;
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-show-more:hover {
+    background: var(--secondary);
+    color: var(--dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 0, 255, 0.3);
+}
+
+.btn-show-more svg {
+    transition: transform 0.3s;
+}
+
+.btn-show-more.active svg {
+    transform: rotate(45deg);
+}
+
+/* Project Details (Hidden by default) */
+.project-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, margin-top 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+    margin-top: 0;
+}
+
+.project-details.active {
+    max-height: 1000px;
+    margin-top: 2rem;
+    opacity: 1;
+}
+
+.project-details h4 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+}
+
+.project-details h4:first-child {
+    margin-top: 0;
+}
+
+.details-list {
+    list-style: none;
+    padding: 0;
+}
+
+.details-list li {
+    padding: 0.6rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-dim);
+    line-height: 1.6;
+}
+
+.details-list li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+.details-list li strong {
+    color: var(--text);
+}
+
+/* Maintenance Sites Styling */
+.maintenance-sites {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.site-item {
+    background: rgba(0, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: all 0.3s;
+}
+
+.site-item:hover {
+    border-color: var(--primary);
+    background: rgba(0, 255, 255, 0.1);
+    transform: translateY(-3px);
+}
+
+.site-item strong {
+    color: var(--primary);
+    font-size: 1rem;
+}
+
+.site-item a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.site-item a:hover {
+    color: var(--primary);
+}
+
+/* Contact Section */
 .contact-container {
     max-width: 800px;
     margin: 0 auto;
@@ -509,7 +658,6 @@ section {
 .contact-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: var(--primary);
 }
 
 .contact-label {
@@ -535,6 +683,7 @@ section {
     color: var(--secondary);
 }
 
+/* Footer */
 footer {
     padding: 3rem 5%;
     text-align: center;
@@ -570,6 +719,7 @@ footer {
     transform: scale(1.1) rotate(360deg);
 }
 
+/* Animations */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -586,6 +736,7 @@ footer {
     to { opacity: 1; }
 }
 
+/* Responsive */
 @media (max-width: 768px) {
     nav {
         padding: 1rem 5%;
@@ -607,6 +758,15 @@ footer {
     .skills-grid,
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .maintenance-sites {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-actions {
+        flex-direction: column;
+        align-items: flex-start;
     }
     
     body {
