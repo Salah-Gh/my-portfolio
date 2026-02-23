@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salah Eddine Ghar - Développeur Full-Stack</title>
-    <link rel="stylesheet" href="./style.css">
-
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Custom Cursor -->
     <div class="cursor"></div>
     <div class="cursor-follower"></div>
-
+    
+    <!-- Background Effects -->
     <div class="bg-grid"></div>
     <div class="bg-gradient"></div>
-
+    
+    <!-- Navigation -->
     <nav>
-        <div class="logo">SEG</div>
+        <div class="logo">SDG</div>
         <ul class="nav-links">
             <li><a href="#home">Accueil</a></li>
             <li><a href="#about">À Propos</a></li>
@@ -24,7 +26,8 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-
+    
+    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
             <div class="hero-label">Développeur Full-Stack</div>
@@ -40,7 +43,8 @@
             <div class="scroll-line"></div>
         </div>
     </section>
-
+    
+    <!-- About Section -->
     <section id="about">
         <h2 class="section-title">À Propos</h2>
         <p class="section-subtitle">Développeur passionné par l'innovation</p>
@@ -66,7 +70,7 @@
                     <div class="stat-label">Années d'expérience</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">50+</div>
+                    <div class="stat-number">25+</div>
                     <div class="stat-label">Projets complétés</div>
                 </div>
                 <div class="stat-card">
@@ -80,7 +84,8 @@
             </div>
         </div>
     </section>
-
+    
+    <!-- Skills Section -->
     <section id="skills">
         <h2 class="section-title">Compétences</h2>
         <p class="section-subtitle">Technologies et outils que je maîtrise</p>
@@ -127,47 +132,163 @@
             </div>
         </div>
     </section>
-
+    
+    <!-- Projects Section -->
     <section id="projects">
         <h2 class="section-title">Projets</h2>
-        <p class="section-subtitle">Une sélection de mes réalisations</p>
+        <p class="section-subtitle">Une sélection de mes réalisations e-commerce</p>
         <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image">🛒</div>
+            <!-- Project 1: Office Store -->
+            <div class="project-card" data-project="officestore">
+                <div class="project-image">🏢</div>
                 <div class="project-content">
                     <h3 class="project-title">Office Store</h3>
                     <p class="project-description">
-                        Migration complète et refonte d'une plateforme e-commerce avec création d'un thème 
-                        PrestaShop sur mesure et intégration multilingue.
+                        Refonte complète d'une plateforme e-commerce PrestaShop avec mise à jour majeure 
+                        et personnalisation avancée.
                     </p>
                     <div class="project-tech">
                         <span class="tech-badge">PrestaShop</span>
                         <span class="tech-badge">PHP</span>
                         <span class="tech-badge">Smarty</span>
                         <span class="tech-badge">MySQL</span>
+                        <span class="tech-badge">Multistore</span>
                     </div>
-                    <a href="#" class="project-link">Voir le projet →</a>
+                    <div class="project-actions">
+                        <a href="https://officestore.nc" target="_blank" class="project-link">
+                            <span>Visiter le site</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </a>
+                        <button class="btn-show-more">
+                            <span>Voir Plus</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M8 3V13M3 8H13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <!-- Detailed Content (Hidden by default) -->
+                    <div class="project-details">
+                        <h4>Détails du Projet</h4>
+                        <ul class="details-list">
+                            <li><strong>Refonte complète</strong> du site selon les besoins spécifiques du client</li>
+                            <li><strong>Mise à jour majeure</strong> de PrestaShop vers la dernière version</li>
+                            <li><strong>Intégration et adaptation</strong> d'un thème sur mesure</li>
+                            <li><strong>Configuration multistore</strong> pour gérer plusieurs boutiques</li>
+                            <li><strong>Création de modules personnalisés</strong> pour fonctionnalités spécifiques</li>
+                            <li><strong>Configuration avancée</strong> des modules existants</li>
+                            <li><strong>Déploiement et mise en production</strong> avec migration des données</li>
+                            <li><strong>Optimisation SEO</strong> et performances</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            
-            <div class="project-card">
-                <div class="project-image">⚗️</div>
+
+            <!-- Project 2: Climay IT -->
+            <div class="project-card" data-project="climay">
+                <div class="project-image">❄️</div>
                 <div class="project-content">
-                    <h3 class="project-title">Mesachimie</h3>
+                    <h3 class="project-title">Climay.it</h3>
                     <p class="project-description">
-                        Développement de modules spécifiques pour PrestaShop et amélioration complète 
-                        du back-office pour optimiser la gestion.
+                        Création complète d'une boutique e-commerce pour un client italien spécialisé 
+                        dans la vente de climatiseurs.
                     </p>
                     <div class="project-tech">
                         <span class="tech-badge">PrestaShop</span>
-                        <span class="tech-badge">PHP</span>
-                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">SEO</span>
+                        <span class="tech-badge">Performance</span>
+                        <span class="tech-badge">Modules Custom</span>
                     </div>
-                    <a href="#" class="project-link">Voir le projet →</a>
+                    <div class="project-actions">
+                        <a href="https://climay.it" target="_blank" class="project-link">
+                            <span>Visiter le site</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </a>
+                        <button class="btn-show-more">
+                            <span>Voir Plus</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M8 3V13M3 8H13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="project-details">
+                        <h4>Détails du Projet</h4>
+                        <ul class="details-list">
+                            <li><strong>Création from scratch</strong> pour un client italien</li>
+                            <li><strong>Configuration serveur</strong> optimisée pour PrestaShop</li>
+                            <li><strong>Sélection du thème</strong> idéal pour SEO et performance</li>
+                            <li><strong>Installation et configuration</strong> du thème et des modules essentiels</li>
+                            <li><strong>Développement de modules personnalisés</strong> pour des blocs spécifiques</li>
+                            <li><strong>Optimisation SEO complète</strong> (meta, URLs, structure)</li>
+                            <li><strong>Optimisation des performances</strong> (cache, compression, CDN)</li>
+                            <li><strong>Formation du client</strong> à la gestion de la boutique</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            
-            <div class="project-card">
+
+            <!-- Project 3: Maintenance Projects -->
+            <div class="project-card" data-project="maintenance">
+                <div class="project-image">🔧</div>
+                <div class="project-content">
+                    <h3 class="project-title">Projets Maintenance</h3>
+                    <p class="project-description">
+                        Maintenance technique et évolutive de plusieurs plateformes e-commerce PrestaShop 
+                        de haute qualité.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">PrestaShop</span>
+                        <span class="tech-badge">Bug Fixing</span>
+                        <span class="tech-badge">Updates</span>
+                        <span class="tech-badge">Modules</span>
+                    </div>
+                    <div class="project-actions">
+                        <button class="btn-show-more">
+                            <span>Voir Plus</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M8 3V13M3 8H13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="project-details">
+                        <h4>Sites en Maintenance</h4>
+                        <div class="maintenance-sites">
+                            <div class="site-item">
+                                <strong>Mesachimie.nc</strong>
+                                <a href="https://www.mesachimie.nc/" target="_blank">Visiter →</a>
+                            </div>
+                            <div class="site-item">
+                                <strong>Mymix.nc</strong>
+                                <a href="https://www.mymix.nc/" target="_blank">Visiter →</a>
+                            </div>
+                            <div class="site-item">
+                                <strong>Maisonmorand.nc</strong>
+                                <a href="https://www.maisonmorand.nc/" target="_blank">Visiter →</a>
+                            </div>
+                            <div class="site-item">
+                                <strong>Littlething.nc</strong>
+                                <a href="https://littlething.nc/" target="_blank">Visiter →</a>
+                            </div>
+                        </div>
+                        <h4>Missions</h4>
+                        <ul class="details-list">
+                            <li><strong>Maintenance corrective</strong> - Résolution rapide des bugs et problèmes techniques</li>
+                            <li><strong>Mises à jour régulières</strong> - PrestaShop, modules et thèmes</li>
+                            <li><strong>Création de modules</strong> pour nouvelles fonctionnalités</li>
+                            <li><strong>Configuration et optimisation</strong> des modules existants</li>
+                            <li><strong>Support technique</strong> et conseils stratégiques</li>
+                            <li><strong>Amélioration continue</strong> des performances et de l'UX</li>
+                            <li><strong>Sécurité</strong> - Audits et renforcement de la sécurité</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4: Custom Solutions -->
+            <div class="project-card" data-project="solutions">
                 <div class="project-image">🎯</div>
                 <div class="project-content">
                     <h3 class="project-title">Solutions Microservices</h3>
@@ -176,33 +297,37 @@
                         méthodologie Agile/Scrum pour Alphalink.
                     </p>
                     <div class="project-tech">
-                        <span class="tech-badge">Laravel</span>
+                        <span class="tech-badge">PHP</span>
                         <span class="tech-badge">API REST</span>
                         <span class="tech-badge">Docker</span>
+                        <span class="tech-badge">Microservices</span>
                     </div>
-                    <a href="#" class="project-link">Voir le projet →</a>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <div class="project-image">📱</div>
-                <div class="project-content">
-                    <h3 class="project-title">Application Mobile</h3>
-                    <p class="project-description">
-                        Développement d'applications mobiles cross-platform avec Flutter, 
-                        offrant une expérience utilisateur fluide et moderne.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-badge">Flutter</span>
-                        <span class="tech-badge">Dart</span>
-                        <span class="tech-badge">API</span>
+                    <div class="project-actions">
+                        <button class="btn-show-more">
+                            <span>Voir Plus</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M8 3V13M3 8H13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
                     </div>
-                    <a href="#" class="project-link">Voir le projet →</a>
+                    <div class="project-details">
+                        <h4>Détails du Projet</h4>
+                        <ul class="details-list">
+                            <li><strong>Architecture microservices</strong> - Design et implémentation</li>
+                            <li><strong>Développement d'API REST</strong> robustes et scalables</li>
+                            <li><strong>Méthodologie Agile/Scrum</strong> - Sprints et livraisons itératives</li>
+                            <li><strong>Containerisation Docker</strong> pour déploiement flexible</li>
+                            <li><strong>Tests automatisés</strong> et intégration continue</li>
+                            <li><strong>Documentation technique</strong> complète</li>
+                            <li><strong>Collaboration équipe</strong> - Code reviews et pair programming</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
+    
+    <!-- Contact Section -->
     <section id="contact">
         <h2 class="section-title">Contact</h2>
         <p class="section-subtitle">Travaillons ensemble sur votre prochain projet</p>
@@ -226,7 +351,7 @@
                     <div class="contact-icon">💼</div>
                     <div class="contact-label">LinkedIn</div>
                     <div class="contact-value">
-                        <a href="https://linkedin.com/in/salah-eddine-ghar" target="_blank">Salah Eddine Ghar</a>
+                        <a href="https://www.linkedin.com/in/salah-eddine-ghar-0250b5229/" target="_blank">Salah Eddine Ghar</a>
                     </div>
                 </div>
                 <div class="contact-item">
@@ -240,10 +365,11 @@
             </div>
         </div>
     </section>
-
+    
+    <!-- Footer -->
     <footer>
         <div class="social-links">
-            <a href="https://linkedin.com/in/salah-eddine-ghar" target="_blank" class="social-link">in</a>
+            <a href="https://www.linkedin.com/in/salah-eddine-ghar-0250b5229/" target="_blank" class="social-link">in</a>
             <a href="https://github.com/salahghar" target="_blank" class="social-link">gh</a>
             <a href="mailto:gharsalah140@gmail.com" class="social-link">@</a>
         </div>
@@ -252,6 +378,6 @@
         </p>
     </footer>
     
-    <script src="./script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
