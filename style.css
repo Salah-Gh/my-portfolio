@@ -736,6 +736,83 @@ footer {
     to { opacity: 1; }
 }
 
+/* AI Skills special styling */
+.skill-category--ai {
+    border-color: rgba(255, 170, 0, 0.3);
+    background: linear-gradient(135deg, var(--dark-light), rgba(255, 100, 0, 0.05));
+}
+
+.skill-category--ai:hover {
+    border-color: #ffaa00;
+}
+
+.skill-category--ai h3 {
+    color: #ffaa00;
+    background: linear-gradient(135deg, #ffaa00, var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.skill-tag--ai {
+    background: rgba(255, 170, 0, 0.1);
+    border-color: rgba(255, 170, 0, 0.4);
+    color: #ffdd88;
+}
+
+.skill-tag--ai:hover {
+    background: #ffaa00;
+    color: var(--dark);
+    box-shadow: 0 5px 15px rgba(255, 170, 0, 0.4);
+}
+
+/* AI project card image */
+.project-image--ai {
+    background: linear-gradient(135deg, rgba(255, 170, 0, 0.15), rgba(255, 0, 255, 0.2));
+}
+
+/* AI Skills special styling */
+.skill-category--ai {
+    border-color: rgba(255, 170, 0, 0.3);
+    background: linear-gradient(135deg, var(--dark-light), rgba(255, 100, 0, 0.05));
+}
+
+.skill-category--ai:hover {
+    border-color: #ffaa00;
+}
+
+.skill-category--ai h3 {
+    color: #ffaa00;
+    background: linear-gradient(135deg, #ffaa00, var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.skill-tag--ai {
+    background: rgba(255, 170, 0, 0.1);
+    border-color: rgba(255, 170, 0, 0.4);
+    color: #ffdd88;
+}
+
+.skill-tag--ai:hover {
+    background: #ffaa00;
+    color: var(--dark);
+    box-shadow: 0 5px 15px rgba(255, 170, 0, 0.4);
+}
+
+/* AI project card image */
+.project-image--ai {
+    background: linear-gradient(135deg, rgba(255, 170, 0, 0.15), rgba(255, 0, 255, 0.2));
+}
+
+/* AI tech badges */
+.tech-badge--ai {
+    background: rgba(255, 170, 0, 0.1);
+    border-color: rgba(255, 170, 0, 0.4);
+    color: #ffdd88;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     nav {
