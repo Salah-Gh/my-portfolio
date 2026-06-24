@@ -3,408 +3,826 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salah Eddine Ghar - Développeur Full-Stack</title>
+    <title>Salah Eddine Ghar — Développeur Full-Stack</title>
+    <meta name="description" content="Développeur Full-Stack spécialisé en PHP, Laravel, PrestaShop et intégration IA. Basé à Fès, Maroc.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Custom Cursor -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-    
-    <!-- Background Effects -->
-    <div class="bg-grid"></div>
-    <div class="bg-gradient"></div>
-    
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">SDG</div>
-        <ul class="nav-links">
-            <li><a href="#home">Accueil</a></li>
-            <li><a href="#about">À Propos</a></li>
-            <li><a href="#skills">Compétences</a></li>
-            <li><a href="#projects">Projets</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+
+    <!-- ═══ NAVIGATION ═══ -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="#home" class="nav-logo">
+                <span class="logo-initials">SDG</span>
+                <span class="logo-dot"></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#experience">Expérience</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="mailto:gharsalah140@gmail.com" class="nav-cta">Me contacter</a>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
     </nav>
-    
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <div class="hero-label">Développeur Full-Stack</div>
-            <h1 class="hero-title">SALAH EDDINE GHAR</h1>
-            <p class="hero-subtitle">Je transforme des idées en expériences digitales exceptionnelles — du développement Full-Stack à l'intégration de solutions IA & LLM.</p>
-            <div class="hero-cta">
-                <a href="#projects" class="btn btn-primary">Voir Mes Projets</a>
-                <a href="#contact" class="btn btn-secondary">Me Contacter</a>
+
+    <!-- ═══ MOBILE MENU ═══ -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#about" class="mobile-link">À propos</a></li>
+            <li><a href="#experience" class="mobile-link">Expérience</a></li>
+            <li><a href="#skills" class="mobile-link">Compétences</a></li>
+            <li><a href="#projects" class="mobile-link">Projets</a></li>
+            <li><a href="#contact" class="mobile-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- ═══ HERO ═══ -->
+    <section id="home" class="hero">
+        <div class="hero-bg-text" aria-hidden="true">DEV</div>
+        <div class="hero-inner">
+            <div class="hero-eyebrow">
+                <span class="eyebrow-dot"></span>
+                Disponible pour de nouveaux projets
+            </div>
+            <h1 class="hero-name">
+                <span class="name-line reveal-up">Salah Eddine</span>
+                <span class="name-line name-line--accent reveal-up" style="animation-delay:.15s">Ghar</span>
+            </h1>
+            <p class="hero-role reveal-up" style="animation-delay:.3s">
+                Développeur <em>Full-Stack</em> &amp; Expert PrestaShop
+            </p>
+            <p class="hero-desc reveal-up" style="animation-delay:.45s">
+                Je conçois et développe des applications web robustes, des plateformes e-commerce performantes 
+                et j'explore l'intégration de l'intelligence artificielle dans des workflows métier réels.
+                Basé à <strong>Fès, Maroc</strong> — disponible en remote.
+            </p>
+            <div class="hero-actions reveal-up" style="animation-delay:.6s">
+                <a href="#projects" class="btn btn--primary">Voir mes projets</a>
+                <a href="#contact" class="btn btn--ghost">Discutons ensemble →</a>
+            </div>
+            <div class="hero-stats reveal-up" style="animation-delay:.75s">
+                <div class="hero-stat">
+                    <span class="stat-n" data-target="4">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-l">Ans d'expérience</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="stat-n" data-target="50">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-l">Projets livrés</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="stat-n" data-target="10">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-l">Technologies</span>
+                </div>
             </div>
         </div>
-        <div class="scroll-indicator">
-            <span>Scroll</span>
+        <div class="hero-scroll">
             <div class="scroll-line"></div>
+            <span>Scroll</span>
         </div>
     </section>
-    
-    <!-- About Section -->
-    <section id="about">
-        <h2 class="section-title">À Propos</h2>
-        <p class="section-subtitle">Développeur passionné par l'innovation</p>
-        <div class="about-content">
-            <div class="about-text">
-                <p>
-                    Développeur Full-Stack avec une expertise approfondie en PHP, Laravel et Symfony. 
-                    Je me spécialise dans la création de solutions web évolutives, l'optimisation de plateformes 
-                    e-commerce et l'intégration d'API complexes.
-                </p>
-                <p>
-                    Actuellement chez <strong style="color: var(--primary);">Telco Dev</strong>, je travaille sur des solutions logicielles 
-                    pour le groupe Alphalink en architecture microservices et Agile/Scrum. J'explore également 
-                    l'intégration de l'IA — notamment les agents LLM, les workflows RAG et les architectures 
-                    d'agents pour automatiser le traitement de données métier.
-                </p>
-                <p>
-                    Passionné par l'intersection entre le développement web et l'intelligence artificielle, 
-                    je combine des compétences backend solides avec une vision orientée vers les technologies 
-                    émergentes comme les LLMs, Elasticsearch et les bases de données vectorielles.
-                </p>
-            </div>
-            <div class="about-stats">
-                <div class="stat-card">
-                    <div class="stat-number">4+</div>
-                    <div class="stat-label">Années d'expérience</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">50+</div>
-                    <div class="stat-label">Projets complétés</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">10+</div>
-                    <div class="stat-label">Technologies maîtrisées</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Satisfaction client</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2 class="section-title">Compétences</h2>
-        <p class="section-subtitle">Technologies et outils que je maîtrise</p>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3>Backend</h3>
-                <div class="skill-list">
-                    <span class="skill-tag">PHP</span>
-                    <span class="skill-tag">Laravel</span>
-                    <span class="skill-tag">Symfony</span>
-                    <span class="skill-tag">API REST</span>
-                    <span class="skill-tag">MySQL</span>
-                    <span class="skill-tag">Elasticsearch</span>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3>Frontend</h3>
-                <div class="skill-list">
-                    <span class="skill-tag">HTML5</span>
-                    <span class="skill-tag">CSS3</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">React JS</span>
-                    <span class="skill-tag">Bootstrap</span>
-                    <span class="skill-tag">SASS</span>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3>CMS & E-commerce</h3>
-                <div class="skill-list">
-                    <span class="skill-tag">PrestaShop</span>
-                    <span class="skill-tag">WordPress</span>
-                    <span class="skill-tag">Smarty</span>
-                    <span class="skill-tag">SEO</span>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3>DevOps & Outils</h3>
-                <div class="skill-list">
-                    <span class="skill-tag">Docker</span>
-                    <span class="skill-tag">Git</span>
-                    <span class="skill-tag">GitLab</span>
-                    <span class="skill-tag">GitHub</span>
-                    <span class="skill-tag">Microservices</span>
-                    <span class="skill-tag">Agile/Scrum</span>
-                </div>
-            </div>
-            <div class="skill-category skill-category--ai">
-                <h3>IA & LLM</h3>
-                <div class="skill-list">
-                    <span class="skill-tag skill-tag--ai">Large Language Models</span>
-                    <span class="skill-tag skill-tag--ai">Agentic AI</span>
-                    <span class="skill-tag skill-tag--ai">RAG</span>
-                    <span class="skill-tag skill-tag--ai">Ollama</span>
-                    <span class="skill-tag skill-tag--ai">LM Studio</span>
-                    <span class="skill-tag skill-tag--ai">Vector Database</span>
-                    <span class="skill-tag skill-tag--ai">Agent Workflows</span>
-                    <span class="skill-tag skill-tag--ai">Prompt Engineering</span>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2 class="section-title">Projets</h2>
-        <p class="section-subtitle">Une sélection de mes réalisations e-commerce</p>
-        <div class="projects-grid">
-            <!-- Project 1: Office Store -->
-            <div class="project-card" data-project="officestore">
-                <div class="project-image">🏢</div>
-                <div class="project-content">
-                    <h3 class="project-title">Office Store</h3>
-                    <p class="project-description">
-                        Refonte complète d'une plateforme e-commerce PrestaShop avec mise à jour majeure 
-                        et personnalisation avancée.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-badge">PrestaShop</span>
-                        <span class="tech-badge">PHP</span>
-                        <span class="tech-badge">Smarty</span>
-                        <span class="tech-badge">MySQL</span>
-                        <span class="tech-badge">Multistore</span>
-                    </div>
-                    <div class="project-actions">
-                        <a href="https://officestore.nc" target="_blank" class="project-link">
-                            <span>Visiter le site</span>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                        </a>
-                        <button class="btn-show-more">
-                            <span>Voir Plus</span>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M8 3V13M3 8H13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <!-- Detailed Content (Hidden by default) -->
-                    <div class="project-details">
-                        <h4>Détails du Projet</h4>
-                        <ul class="details-list">
-                            <li><strong>Refonte complète</strong> du site selon les besoins spécifiques du client</li>
-                            <li><strong>Mise à jour majeure</strong> de PrestaShop vers la dernière version</li>
-                            <li><strong>Intégration et adaptation</strong> d'un thème sur mesure</li>
-                            <li><strong>Configuration multistore</strong> pour gérer plusieurs boutiques</li>
-                            <li><strong>Création de modules personnalisés</strong> pour fonctionnalités spécifiques</li>
-                            <li><strong>Configuration avancée</strong> des modules existants</li>
-                            <li><strong>Déploiement et mise en production</strong> avec migration des données</li>
-                            <li><strong>Optimisation SEO</strong> et performances</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Project 2: Climay IT -->
-            <div class="project-card" data-project="climay">
-                <div class="project-image">❄️</div>
-                <div class="project-content">
-                    <h3 class="project-title">Climay.it</h3>
-                    <p class="project-description">
-                        Création complète d'une boutique e-commerce pour un client italien spécialisé 
-                        dans la vente de climatiseurs.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-badge">PrestaShop</span>
-                        <span class="tech-badge">SEO</span>
-                        <span class="tech-badge">Performance</span>
-                        <span class="tech-badge">Modules Custom</span>
-                    </div>
-                    <div class="project-actions">
-                        <a href="https://climay.it" target="_blank" class="project-link">
-                            <span>Visiter le site</span>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                        </a>
-                        <button class="btn-show-more">
-                            <span>Voir Plus</span>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M8 3V13M3 8H13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="project-details">
-                        <h4>Détails du Projet</h4>
-                        <ul class="details-list">
-                            <li><strong>Création from scratch</strong> pour un client italien</li>
-                            <li><strong>Configuration serveur</strong> optimisée pour PrestaShop</li>
-                            <li><strong>Sélection du thème</strong> idéal pour SEO et performance</li>
-                            <li><strong>Installation et configuration</strong> du thème et des modules essentiels</li>
-                            <li><strong>Développement de modules personnalisés</strong> pour des blocs spécifiques</li>
-                            <li><strong>Optimisation SEO complète</strong> (meta, URLs, structure)</li>
-                            <li><strong>Optimisation des performances</strong> (cache, compression, CDN)</li>
-                            <li><strong>Formation du client</strong> à la gestion de la boutique</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 3: Maintenance Projects -->
-            <div class="project-card" data-project="maintenance">
-                <div class="project-image">🔧</div>
-                <div class="project-content">
-                    <h3 class="project-title">Projets Maintenance</h3>
-                    <p class="project-description">
-                        Maintenance technique et évolutive de plusieurs plateformes e-commerce PrestaShop 
-                        de haute qualité.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-badge">PrestaShop</span>
-                        <span class="tech-badge">Bug Fixing</span>
-                        <span class="tech-badge">Updates</span>
-                        <span class="tech-badge">Modules</span>
-                    </div>
-                    <div class="project-actions">
-                        <button class="btn-show-more">
-                            <span>Voir Plus</span>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M8 3V13M3 8H13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="project-details">
-                        <h4>Sites en Maintenance</h4>
-                        <div class="maintenance-sites">
-                            <div class="site-item">
-                                <strong>Mesachimie.nc</strong>
-                                <a href="https://www.mesachimie.nc/" target="_blank">Visiter →</a>
+    <!-- ═══ ABOUT ═══ -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-left">
+                    <div class="section-label">01 — À propos</div>
+                    <h2 class="section-heading">Bâtir des choses qui <em>fonctionnent</em> vraiment.</h2>
+                    <div class="about-portrait">
+                        <div class="portrait-placeholder">
+                            <span>SDG</span>
+                        </div>
+                        <div class="portrait-info">
+                            <div class="info-item">
+                                <span class="info-key">Localisation</span>
+                                <span class="info-val">Fès, Maroc 🇲🇦</span>
                             </div>
-                            <div class="site-item">
-                                <strong>Mymix.nc</strong>
-                                <a href="https://www.mymix.nc/" target="_blank">Visiter →</a>
+                            <div class="info-item">
+                                <span class="info-key">Nationalité</span>
+                                <span class="info-val">Marocain</span>
                             </div>
-                            <div class="site-item">
-                                <strong>Maisonmorand.nc</strong>
-                                <a href="https://www.maisonmorand.nc/" target="_blank">Visiter →</a>
+                            <div class="info-item">
+                                <span class="info-key">Langues</span>
+                                <span class="info-val">Arabe · Français · Anglais</span>
                             </div>
-                            <div class="site-item">
-                                <strong>Littlething.nc</strong>
-                                <a href="https://littlething.nc/" target="_blank">Visiter →</a>
+                            <div class="info-item">
+                                <span class="info-key">Disponibilité</span>
+                                <span class="info-val available">Ouvert aux opportunités</span>
                             </div>
                         </div>
-                        <h4>Missions</h4>
-                        <ul class="details-list">
-                            <li><strong>Maintenance corrective</strong> - Résolution rapide des bugs et problèmes techniques</li>
-                            <li><strong>Mises à jour régulières</strong> - PrestaShop, modules et thèmes</li>
-                            <li><strong>Création de modules</strong> pour nouvelles fonctionnalités</li>
-                            <li><strong>Configuration et optimisation</strong> des modules existants</li>
-                            <li><strong>Support technique</strong> et conseils stratégiques</li>
-                            <li><strong>Amélioration continue</strong> des performances et de l'UX</li>
-                            <li><strong>Sécurité</strong> - Audits et renforcement de la sécurité</li>
-                        </ul>
                     </div>
                 </div>
-            </div>
-
-            <!-- Project 4: Telco Dev / AI -->
-            <div class="project-card" data-project="telcodev">
-                <div class="project-image project-image--ai">🤖</div>
-                <div class="project-content">
-                    <h3 class="project-title">Telco Dev — IA & Microservices</h3>
-                    <p class="project-description">
-                        Développement de solutions logicielles pour Alphalink et exploration de l'intégration 
-                        d'agents IA avec LLMs — de la preuve de concept à l'architecture d'agents autonomes.
+                <div class="about-right">
+                    <p class="about-lead">
+                        Développeur Full-Stack avec plus de 4 ans d'expérience, je suis spécialisé dans 
+                        l'écosystème PHP — Laravel, Symfony — et dans l'univers e-commerce PrestaShop, 
+                        de la version 1.6 jusqu'aux versions récentes 8.x et 9.x.
                     </p>
-                    <div class="project-tech">
-                        <span class="tech-badge tech-badge--ai">LLM</span>
-                        <span class="tech-badge tech-badge--ai">RAG</span>
-                        <span class="tech-badge tech-badge--ai">Agentic AI</span>
-                        <span class="tech-badge">API REST</span>
-                        <span class="tech-badge">Microservices</span>
-                        <span class="tech-badge">Docker</span>
+                    <p class="about-body">
+                        Mon parcours m'a conduit de la conception de modules PrestaShop personnalisés 
+                        à la refonte complète de boutiques e-commerce pour des clients en France, 
+                        en Nouvelle-Calédonie et en Italie. J'ai appris à écouter les besoins métier 
+                        avant d'écrire la première ligne de code.
+                    </p>
+                    <p class="about-body">
+                        Aujourd'hui chez <strong>Telco Dev</strong>, je travaille dans un environnement 
+                        Agile/Scrum sur une architecture microservices pour le groupe Alphalink, tout en 
+                        explorant activement l'intégration des LLMs — agents conversationnels, RAG, 
+                        workflows autonomes — dans des applications métier réelles.
+                    </p>
+                    <p class="about-body">
+                        En dehors du code, je m'intéresse à l'architecture logicielle, à l'optimisation 
+                        SEO technique et aux nouvelles approches de l'IA générative appliquée au web.
+                    </p>
+                    <div class="about-links">
+                        <a href="https://www.linkedin.com/in/salah-eddine-ghar-0250b5229/" target="_blank" class="about-link">LinkedIn ↗</a>
+                        <a href="https://github.com/salahghar" target="_blank" class="about-link">GitHub ↗</a>
+                        <a href="mailto:gharsalah140@gmail.com" class="about-link">Email ↗</a>
                     </div>
-                    <div class="project-actions">
-                        <button class="btn-show-more">
-                            <span>Voir Plus</span>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M8 3V13M3 8H13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ EXPERIENCE ═══ -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">02 — Expérience</div>
+                <h2 class="section-heading">Parcours professionnel</h2>
+            </div>
+            <div class="timeline">
+
+                <!-- Telco Dev -->
+                <div class="timeline-item reveal-up">
+                    <div class="timeline-left">
+                        <div class="tl-period">09/2024 — Présent</div>
+                        <div class="tl-badge tl-badge--current">Poste actuel</div>
+                    </div>
+                    <div class="timeline-center">
+                        <div class="tl-dot tl-dot--active"></div>
+                        <div class="tl-line"></div>
+                    </div>
+                    <div class="timeline-right">
+                        <div class="tl-company">Telco Dev</div>
+                        <div class="tl-role">Développeur Full-Stack</div>
+                        <div class="tl-location">📍 Fès, Maroc</div>
+                        <p class="tl-desc">
+                            Développement de solutions logicielles pour le groupe Alphalink dans un environnement 
+                            Agile/Scrum avec une architecture microservices. Participation active à l'exploration 
+                            de l'intégration IA dans les workflows applicatifs.
+                        </p>
+                        <ul class="tl-list">
+                            <li>Développement et maintenance d'APIs RESTful robustes et scalables</li>
+                            <li>Travail en architecture microservices dans un environnement Agile/Scrum</li>
+                            <li>Conception d'un agent chatbot IA (PoC) intégré aux APIs applicatives existantes</li>
+                            <li>Exploration des LLMs, agents autonomes et workflows RAG pour le traitement de données métier</li>
+                            <li>Évaluation d'outils IA, stratégies de prompting et architectures d'orchestration</li>
+                            <li>Contribution au design des flux de données pour interactions assistées par IA</li>
+                        </ul>
+                        <div class="tl-tags">
+                            <span>PHP</span><span>Laravel</span><span>API REST</span>
+                            <span>Microservices</span><span>Docker</span><span>LLM</span><span>RAG</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Freelance -->
+                <div class="timeline-item reveal-up">
+                    <div class="timeline-left">
+                        <div class="tl-period">01/2025 — Présent</div>
+                        <div class="tl-badge tl-badge--current">Actif</div>
+                    </div>
+                    <div class="timeline-center">
+                        <div class="tl-dot tl-dot--active"></div>
+                        <div class="tl-line"></div>
+                    </div>
+                    <div class="timeline-right">
+                        <div class="tl-company">Freelance</div>
+                        <div class="tl-role">Développeur Web — Expert PrestaShop &amp; WordPress</div>
+                        <div class="tl-location">📍 Remote · Nouvelle-Calédonie &amp; International</div>
+                        <p class="tl-desc">
+                            Développement et maintenance de plateformes web pour des clients principalement 
+                            basés en Nouvelle-Calédonie. Double spécialisation PrestaShop (e-commerce) et 
+                            WordPress (sites vitrine &amp; e-commerce), avec plus de 27 sites actifs sous gestion.
+                        </p>
+                        <ul class="tl-list">
+                            <li>Maintenance corrective et évolutive d'un portefeuille de 27+ sites (PrestaShop &amp; WordPress)</li>
+                            <li>Refonte et migration complète de boutiques PrestaShop (1.6 → 9.x)</li>
+                            <li>Développement de modules PrestaShop et plugins WordPress sur mesure</li>
+                            <li>Optimisation SEO technique et performances (Core Web Vitals)</li>
+                            <li>Configuration de serveurs, déploiements et mises à jour critiques</li>
+                            <li>Conseil et accompagnement technique des clients</li>
+                        </ul>
+                        <div class="tl-tags">
+                            <span>PrestaShop</span><span>WordPress</span><span>PHP</span>
+                            <span>Smarty</span><span>MySQL</span><span>SEO</span><span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- L'NKBOOT -->
+                <div class="timeline-item reveal-up">
+                    <div class="timeline-left">
+                        <div class="tl-period">10/2022 — 08/2024</div>
+                        <div class="tl-badge">2 ans</div>
+                    </div>
+                    <div class="timeline-center">
+                        <div class="tl-dot"></div>
+                        <div class="tl-line"></div>
+                    </div>
+                    <div class="timeline-right">
+                        <div class="tl-company">L'NKBOOT</div>
+                        <div class="tl-role">Développeur Full-Stack</div>
+                        <div class="tl-location">📍 Tanger, Maroc</div>
+                        <p class="tl-desc">
+                            Développement de solutions web variées au sein d'une startup dynamique. 
+                            Travail sur des projets clients allant de la conception à la mise en production.
+                        </p>
+                        <ul class="tl-list">
+                            <li>Développement de solutions web full-stack pour divers clients</li>
+                            <li>Conception et développement de modules et plugins personnalisés CMS</li>
+                            <li>Configuration de serveurs et déploiement d'applications web</li>
+                            <li>Conception UI/UX et intégration frontend</li>
+                            <li>Débogage, optimisation de performances et référencement SEO</li>
+                        </ul>
+                        <div class="tl-tags">
+                            <span>PHP</span><span>PrestaShop</span><span>WordPress</span>
+                            <span>JavaScript</span><span>CSS</span><span>MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OPERATING MEDIA -->
+                <div class="timeline-item reveal-up">
+                    <div class="timeline-left">
+                        <div class="tl-period">07/2021 — 10/2022</div>
+                        <div class="tl-badge">1 an 3 mois</div>
+                    </div>
+                    <div class="timeline-center">
+                        <div class="tl-dot"></div>
+                        <div class="tl-line"></div>
+                    </div>
+                    <div class="timeline-right">
+                        <div class="tl-company">Operating Media</div>
+                        <div class="tl-role">Marketing Digital — Email Marketing</div>
+                        <div class="tl-location">📍 Tanger, Maroc</div>
+                        <p class="tl-desc">
+                            Spécialisation dans les stratégies de marketing par email, gestion de campagnes 
+                            et analyse des performances.
+                        </p>
+                        <ul class="tl-list">
+                            <li>Conception et déploiement de campagnes email marketing</li>
+                            <li>Analyse des métriques et optimisation des taux de conversion</li>
+                            <li>Gestion des listes de contacts et segmentation</li>
+                        </ul>
+                        <div class="tl-tags">
+                            <span>Email Marketing</span><span>Campagnes</span><span>Analytics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stage -->
+                <div class="timeline-item reveal-up">
+                    <div class="timeline-left">
+                        <div class="tl-period">03/2022 — 04/2022</div>
+                        <div class="tl-badge">Stage</div>
+                    </div>
+                    <div class="timeline-center">
+                        <div class="tl-dot"></div>
+                    </div>
+                    <div class="timeline-right">
+                        <div class="tl-company">Competence Center</div>
+                        <div class="tl-role">Stagiaire Développeur</div>
+                        <div class="tl-location">📍 Fès, Maroc</div>
+                        <p class="tl-desc">
+                            Conception et développement d'une application de bureau pour la gestion 
+                            des études et des formations.
+                        </p>
+                        <div class="tl-tags">
+                            <span>Développement Desktop</span><span>Gestion de projet</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ EDUCATION ═══ -->
+    <section class="section education">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">03 — Formation</div>
+                <h2 class="section-heading">Parcours académique</h2>
+            </div>
+            <div class="edu-grid">
+                <div class="edu-card reveal-up">
+                    <div class="edu-year">2022</div>
+                    <div class="edu-content">
+                        <div class="edu-degree">Technicien Spécialisé en Développement Informatique</div>
+                        <div class="edu-level">Bac +2 · ISTA Hay Al Adarissa</div>
+                        <div class="edu-location">Fès, Maroc</div>
+                        <p class="edu-desc">
+                            Formation intensive en développement logiciel couvrant les langages de programmation, 
+                            les bases de données, les réseaux et la gestion de projets informatiques.
+                        </p>
+                    </div>
+                </div>
+                <div class="edu-card reveal-up">
+                    <div class="edu-year">2020</div>
+                    <div class="edu-content">
+                        <div class="edu-degree">Baccalauréat en Sciences Physiques</div>
+                        <div class="edu-level">Lycée Allal Al Fessi</div>
+                        <div class="edu-location">Fès, Maroc</div>
+                        <p class="edu-desc">
+                            Formation scientifique rigoureuse développant la pensée analytique et 
+                            les capacités de résolution de problèmes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ SKILLS ═══ -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">04 — Compétences</div>
+                <h2 class="section-heading">Stack technique</h2>
+            </div>
+            <div class="skills-layout">
+                <div class="skill-block reveal-up">
+                    <div class="skill-block-number">01</div>
+                    <h3 class="skill-block-title">Backend</h3>
+                    <p class="skill-block-desc">Développement d'APIs robustes et d'applications serveur performantes.</p>
+                    <div class="skill-pills">
+                        <span class="pill">PHP</span>
+                        <span class="pill">Laravel</span>
+                        <span class="pill">Symfony</span>
+                        <span class="pill">API REST</span>
+                        <span class="pill">MySQL</span>
+                        <span class="pill">Elasticsearch</span>
+                    </div>
+                </div>
+                <div class="skill-block reveal-up">
+                    <div class="skill-block-number">02</div>
+                    <h3 class="skill-block-title">Frontend</h3>
+                    <p class="skill-block-desc">Interfaces utilisateur modernes, réactives et accessibles.</p>
+                    <div class="skill-pills">
+                        <span class="pill">HTML5</span>
+                        <span class="pill">CSS3 / SASS</span>
+                        <span class="pill">JavaScript</span>
+                        <span class="pill">React JS</span>
+                        <span class="pill">Bootstrap</span>
+                    </div>
+                </div>
+                <div class="skill-block reveal-up">
+                    <div class="skill-block-number">03</div>
+                    <h3 class="skill-block-title">E-commerce & CMS</h3>
+                    <p class="skill-block-desc">Expert PrestaShop de la v1.6 à la v9.x, WordPress et développement de modules sur mesure.</p>
+                    <div class="skill-pills">
+                        <span class="pill">PrestaShop</span>
+                        <span class="pill">WordPress</span>
+                        <span class="pill">Smarty</span>
+                        <span class="pill">Modules Custom</span>
+                        <span class="pill">Multistore</span>
+                        <span class="pill">SEO Technique</span>
+                    </div>
+                </div>
+                <div class="skill-block reveal-up">
+                    <div class="skill-block-number">04</div>
+                    <h3 class="skill-block-title">DevOps & Outils</h3>
+                    <p class="skill-block-desc">Infrastructure, versionning et méthodologies de travail en équipe.</p>
+                    <div class="skill-pills">
+                        <span class="pill">Docker</span>
+                        <span class="pill">Git / GitLab</span>
+                        <span class="pill">GitHub</span>
+                        <span class="pill">Agile / Scrum</span>
+                        <span class="pill">Microservices</span>
+                        <span class="pill">Flutter</span>
+                    </div>
+                </div>
+                <div class="skill-block skill-block--highlight reveal-up">
+                    <div class="skill-block-number">05</div>
+                    <h3 class="skill-block-title">IA & LLM <span class="new-badge">Nouveau</span></h3>
+                    <p class="skill-block-desc">Exploration et intégration de l'intelligence artificielle dans des workflows applicatifs réels.</p>
+                    <div class="skill-pills">
+                        <span class="pill pill--highlight">Large Language Models</span>
+                        <span class="pill pill--highlight">Agentic AI</span>
+                        <span class="pill pill--highlight">RAG</span>
+                        <span class="pill pill--highlight">Ollama</span>
+                        <span class="pill pill--highlight">LM Studio</span>
+                        <span class="pill pill--highlight">Vector Database</span>
+                        <span class="pill pill--highlight">Prompt Engineering</span>
+                    </div>
+                </div>
+                <div class="skill-block reveal-up">
+                    <div class="skill-block-number">06</div>
+                    <h3 class="skill-block-title">Langues</h3>
+                    <p class="skill-block-desc">Communication professionnelle multilingue avec des clients internationaux.</p>
+                    <div class="lang-list">
+                        <div class="lang-item">
+                            <span class="lang-name">Arabe</span>
+                            <div class="lang-bar"><div class="lang-fill" style="width:100%"></div></div>
+                            <span class="lang-level">Natif</span>
+                        </div>
+                        <div class="lang-item">
+                            <span class="lang-name">Français</span>
+                            <div class="lang-bar"><div class="lang-fill" style="width:90%"></div></div>
+                            <span class="lang-level">Professionnel</span>
+                        </div>
+                        <div class="lang-item">
+                            <span class="lang-name">Anglais</span>
+                            <div class="lang-bar"><div class="lang-fill" style="width:75%"></div></div>
+                            <span class="lang-level">Professionnel</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ PROJECTS ═══ -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">05 — Projets</div>
+                <h2 class="section-heading">Réalisations sélectionnées</h2>
+            </div>
+            <div class="projects-list">
+
+                <!-- Office Store -->
+                <article class="project-item reveal-up">
+                    <div class="project-meta">
+                        <div class="project-number">01</div>
+                        <div class="project-category">E-commerce · PrestaShop</div>
+                        <div class="project-year">2024</div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-header">
+                            <div>
+                                <h3 class="project-title">Office Store</h3>
+                                <p class="project-url">officestore.nc</p>
+                            </div>
+                            <a href="https://officestore.nc" target="_blank" class="project-visit">
+                                Visiter le site ↗
+                            </a>
+                        </div>
+                        <p class="project-desc">
+                            Refonte complète d'une plateforme e-commerce PrestaShop pour un client basé en 
+                            Nouvelle-Calédonie. Le projet a impliqué une mise à jour majeure du CMS, une 
+                            personnalisation poussée du thème et la mise en place d'une architecture multistore.
+                        </p>
+                        <button class="expand-btn" data-target="officestore-details">
+                            <span class="expand-text">Voir les détails</span>
+                            <span class="expand-icon">+</span>
                         </button>
+                        <div class="project-details-panel" id="officestore-details">
+                            <div class="details-grid">
+                                <div class="details-col">
+                                    <h4>Ce qui a été réalisé</h4>
+                                    <ul>
+                                        <li>Migration et mise à jour majeure de PrestaShop vers la dernière version stable</li>
+                                        <li>Refonte graphique complète selon la charte du client</li>
+                                        <li>Intégration et adaptation d'un thème sur mesure</li>
+                                        <li>Configuration de l'architecture multistore</li>
+                                        <li>Développement de modules personnalisés pour fonctionnalités spécifiques</li>
+                                        <li>Déploiement et migration des données en production</li>
+                                        <li>Optimisation SEO on-page et performances techniques</li>
+                                    </ul>
+                                </div>
+                                <div class="details-col">
+                                    <h4>Stack technique</h4>
+                                    <div class="skill-pills">
+                                        <span class="pill">PrestaShop</span>
+                                        <span class="pill">PHP</span>
+                                        <span class="pill">Smarty</span>
+                                        <span class="pill">MySQL</span>
+                                        <span class="pill">JavaScript</span>
+                                        <span class="pill">Bootstrap</span>
+                                        <span class="pill">Multistore</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-details">
-                        <h4>Développement Logiciel</h4>
-                        <ul class="details-list">
-                            <li><strong>Contribution au développement</strong> de solutions logicielles pour le groupe Alphalink</li>
-                            <li><strong>Architecture microservices</strong> — design et implémentation de services indépendants</li>
-                            <li><strong>APIs REST robustes</strong> — développement et maintenance</li>
-                            <li><strong>Méthodologie Agile/Scrum</strong> — sprints, daily standups, livraisons itératives</li>
-                        </ul>
-                        <h4>Intégration IA & LLM</h4>
-                        <ul class="details-list">
-                            <li><strong>Agent Chatbot IA (PoC)</strong> — intégration avec les APIs applicatives existantes</li>
-                            <li><strong>Intégration LLM</strong> — workflows d'agents pour récupérer et traiter des données métier depuis des prompts utilisateurs</li>
-                            <li><strong>RAG (Retrieval-Augmented Generation)</strong> — exploration de bases de données vectorielles pour enrichir les réponses IA</li>
-                            <li><strong>Évaluation d'outils IA</strong> — comparaison de stratégies de prompting, architectures d'agents et approches d'orchestration</li>
-                            <li><strong>Tests & validation</strong> — participation aux cycles d'expérimentation et de validation des solutions IA</li>
-                            <li><strong>Design du flux de données</strong> — intégration API et architecture pour interactions assistées par IA</li>
-                            <li><strong>Outils utilisés</strong> — Ollama, LM Studio, Elasticsearch, bases de données vectorielles</li>
-                        </ul>
+                </article>
+
+                <!-- Climay.it -->
+                <article class="project-item reveal-up">
+                    <div class="project-meta">
+                        <div class="project-number">02</div>
+                        <div class="project-category">E-commerce · Création</div>
+                        <div class="project-year">2024</div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-header">
+                            <div>
+                                <h3 class="project-title">Climay.it</h3>
+                                <p class="project-url">climay.it — Client italien</p>
+                            </div>
+                            <a href="https://climay.it" target="_blank" class="project-visit">
+                                Visiter le site ↗
+                            </a>
+                        </div>
+                        <p class="project-desc">
+                            Création from scratch d'une boutique e-commerce spécialisée dans la vente de 
+                            climatiseurs pour un client en Italie. Projet mené de la configuration serveur 
+                            jusqu'à la mise en ligne, avec un fort accent sur les performances et le SEO.
+                        </p>
+                        <button class="expand-btn" data-target="climay-details">
+                            <span class="expand-text">Voir les détails</span>
+                            <span class="expand-icon">+</span>
+                        </button>
+                        <div class="project-details-panel" id="climay-details">
+                            <div class="details-grid">
+                                <div class="details-col">
+                                    <h4>Ce qui a été réalisé</h4>
+                                    <ul>
+                                        <li>Configuration complète du serveur d'hébergement pour PrestaShop</li>
+                                        <li>Sélection et installation du thème optimisé pour SEO et performance</li>
+                                        <li>Configuration et paramétrage des modules essentiels</li>
+                                        <li>Développement de modules personnalisés pour des blocs spécifiques</li>
+                                        <li>Optimisation SEO complète (balises meta, structure d'URLs, sitemap)</li>
+                                        <li>Optimisation des performances (cache, compression, lazy loading)</li>
+                                        <li>Formation du client à l'administration de la boutique</li>
+                                    </ul>
+                                </div>
+                                <div class="details-col">
+                                    <h4>Stack technique</h4>
+                                    <div class="skill-pills">
+                                        <span class="pill">PrestaShop</span>
+                                        <span class="pill">PHP</span>
+                                        <span class="pill">Smarty</span>
+                                        <span class="pill">SEO</span>
+                                        <span class="pill">Performance</span>
+                                        <span class="pill">MySQL</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Maintenance -->
+                <article class="project-item reveal-up">
+                    <div class="project-meta">
+                        <div class="project-number">03</div>
+                        <div class="project-category">Maintenance · 27 sites</div>
+                        <div class="project-year">2023–Présent</div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-header">
+                            <div>
+                                <h3 class="project-title">Portefeuille Maintenance</h3>
+                                <p class="project-url">27 sites actifs · Nouvelle-Calédonie</p>
+                            </div>
+                        </div>
+                        <p class="project-desc">
+                            Responsable de la maintenance technique et évolutive d'un portefeuille de 27 sites web 
+                            en Nouvelle-Calédonie — boutiques e-commerce PrestaShop et sites vitrine WordPress. 
+                            Gestion complète de bout en bout : mises à jour, corrections de bugs, création de 
+                            modules, sécurité et optimisation continue.
+                        </p>
+
+                        <!-- PrestaShop sites -->
+                        <div class="msite-group">
+                            <div class="msite-group-label">
+                                <span class="msite-platform msite-platform--ps">PrestaShop</span>
+                                E-commerce
+                            </div>
+                            <div class="maintenance-sites-bar">
+                                <a href="https://officestore.nc" target="_blank" class="msite">officestore.nc ↗</a>
+                                <a href="https://littlething.nc" target="_blank" class="msite">littlething.nc ↗</a>
+                                <a href="https://www.maisonmorand.nc" target="_blank" class="msite">maisonmorand.nc ↗</a>
+                                <a href="https://www.mesachimie.nc" target="_blank" class="msite">mesachimie.nc ↗</a>
+                                <a href="https://www.mymix.nc" target="_blank" class="msite">mymix.nc ↗</a>
+                            </div>
+                        </div>
+
+                        <!-- WordPress E-commerce sites -->
+                        <div class="msite-group">
+                            <div class="msite-group-label">
+                                <span class="msite-platform msite-platform--wp">WordPress</span>
+                                E-commerce
+                            </div>
+                            <div class="maintenance-sites-bar">
+                                <a href="https://www.istore.nc" target="_blank" class="msite">istore.nc ↗</a>
+                                <a href="https://mr-bricolage.nc" target="_blank" class="msite">mr-bricolage.nc ↗</a>
+                                <a href="https://www.udrive.nc" target="_blank" class="msite">udrive.nc ↗</a>
+                                <a href="https://toolbox.dev.setup.nc" target="_blank" class="msite msite--inactive">toolbox (inactif)</a>
+                                <a href="https://copieur.dev.setup.nc" target="_blank" class="msite msite--inactive">copieur (inactif)</a>
+                                <a href="https://beta.sib-distribution.dsp.nc" target="_blank" class="msite msite--inactive">sib-distribution (inactif)</a>
+                            </div>
+                        </div>
+
+                        <!-- WordPress Vitrine sites -->
+                        <div class="msite-group">
+                            <div class="msite-group-label">
+                                <span class="msite-platform msite-platform--wp">WordPress</span>
+                                Sites vitrine
+                            </div>
+                            <div class="maintenance-sites-bar">
+                                <a href="https://ambianceetstyles.nc" target="_blank" class="msite">ambianceetstyles.nc ↗</a>
+                                <a href="https://cad.nc" target="_blank" class="msite">cad.nc ↗</a>
+                                <a href="https://ceramic.nc" target="_blank" class="msite">ceramic.nc ↗</a>
+                                <a href="https://www.educationsante.nc" target="_blank" class="msite">educationsante.nc ↗</a>
+                                <a href="https://groupeslk.com" target="_blank" class="msite">groupeslk.com ↗</a>
+                                <a href="https://leasecar.nc" target="_blank" class="msite">leasecar.nc ↗</a>
+                                <a href="https://mr-bricolage.nc" target="_blank" class="msite">mr-bricolage.nc ↗</a>
+                                <a href="https://www.papaye.nc" target="_blank" class="msite">papaye.nc ↗</a>
+                                <a href="https://rabot.nc" target="_blank" class="msite">rabot.nc ↗</a>
+                                <a href="https://setup.nc" target="_blank" class="msite">setup.nc ↗</a>
+                                <a href="https://santeo.nc" target="_blank" class="msite">santeo.nc ↗</a>
+                                <a href="https://crossfitvdc.nc" target="_blank" class="msite">crossfitvdc.nc ↗</a>
+                                <a href="https://www.talentscaledoniens.nc" target="_blank" class="msite">talentscaledoniens.nc ↗</a>
+                                <a href="https://beta.patiscal.dsp.nc" target="_blank" class="msite msite--inactive">patiscal (inactif)</a>
+                                <a href="https://beta.sgia.nc" target="_blank" class="msite msite--inactive">sgia (inactif)</a>
+                                <a href="https://dev.lmi.dsp.nc" target="_blank" class="msite msite--inactive">lmi-dev (inactif)</a>
+                            </div>
+                        </div>
+
+                        <button class="expand-btn" data-target="maintenance-details">
+                            <span class="expand-text">Voir les détails</span>
+                            <span class="expand-icon">+</span>
+                        </button>
+                        <div class="project-details-panel" id="maintenance-details">
+                            <div class="details-grid">
+                                <div class="details-col">
+                                    <h4>Missions assurées</h4>
+                                    <ul>
+                                        <li>Maintenance corrective — résolution rapide des bugs et incidents</li>
+                                        <li>Mises à jour régulières : CMS, modules, thèmes et plugins</li>
+                                        <li>Développement de modules PrestaShop et plugins WordPress sur mesure</li>
+                                        <li>Configuration et optimisation des extensions existantes</li>
+                                        <li>Audits de sécurité et renforcement des protections</li>
+                                        <li>Optimisation des performances et de l'expérience utilisateur</li>
+                                        <li>Gestion des hébergements et des déploiements</li>
+                                        <li>Support technique et conseil stratégique client</li>
+                                    </ul>
+                                </div>
+                                <div class="details-col">
+                                    <h4>Stack technique</h4>
+                                    <div class="skill-pills">
+                                        <span class="pill">PrestaShop</span>
+                                        <span class="pill">WordPress</span>
+                                        <span class="pill">PHP</span>
+                                        <span class="pill">MySQL</span>
+                                        <span class="pill">JavaScript</span>
+                                        <span class="pill">Smarty</span>
+                                        <span class="pill">WooCommerce</span>
+                                        <span class="pill">Modules Custom</span>
+                                        <span class="pill">SEO</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Telco Dev AI -->
+                <article class="project-item reveal-up">
+                    <div class="project-meta">
+                        <div class="project-number">04</div>
+                        <div class="project-category">IA · Microservices</div>
+                        <div class="project-year">2024–Présent</div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-header">
+                            <div>
+                                <h3 class="project-title">Agent IA & Microservices — Telco Dev</h3>
+                                <p class="project-url">Groupe Alphalink</p>
+                            </div>
+                            <span class="project-visit project-visit--internal">Projet interne</span>
+                        </div>
+                        <p class="project-desc">
+                            Au sein de Telco Dev, développement de solutions logicielles en architecture 
+                            microservices et exploration de l'intégration IA — de la preuve de concept 
+                            d'un agent chatbot jusqu'aux workflows RAG pour le traitement de données métier.
+                        </p>
+                        <button class="expand-btn" data-target="telco-details">
+                            <span class="expand-text">Voir les détails</span>
+                            <span class="expand-icon">+</span>
+                        </button>
+                        <div class="project-details-panel" id="telco-details">
+                            <div class="details-grid">
+                                <div class="details-col">
+                                    <h4>Développement Logiciel</h4>
+                                    <ul>
+                                        <li>Développement et maintenance d'APIs REST robustes et scalables</li>
+                                        <li>Architecture microservices — design et implémentation</li>
+                                        <li>Travail en méthodologie Agile/Scrum (sprints, code reviews)</li>
+                                        <li>Containerisation Docker et gestion des environnements</li>
+                                    </ul>
+                                    <h4 style="margin-top:1.5rem">Intégration IA & LLM</h4>
+                                    <ul>
+                                        <li>Conception d'un agent chatbot IA (PoC) connecté aux APIs applicatives</li>
+                                        <li>Exploration des LLMs et workflows d'agents pour traitement de données métier</li>
+                                        <li>Implémentation d'architectures RAG avec bases de données vectorielles</li>
+                                        <li>Évaluation comparative d'outils IA (Ollama, LM Studio) et stratégies de prompting</li>
+                                        <li>Tests, validation et itération sur les solutions d'IA</li>
+                                    </ul>
+                                </div>
+                                <div class="details-col">
+                                    <h4>Stack technique</h4>
+                                    <div class="skill-pills">
+                                        <span class="pill">PHP / Laravel</span>
+                                        <span class="pill">API REST</span>
+                                        <span class="pill">Docker</span>
+                                        <span class="pill">Microservices</span>
+                                        <span class="pill pill--highlight">LLM</span>
+                                        <span class="pill pill--highlight">RAG</span>
+                                        <span class="pill pill--highlight">Ollama</span>
+                                        <span class="pill pill--highlight">Elasticsearch</span>
+                                        <span class="pill pill--highlight">Vector DB</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ CONTACT ═══ -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="contact-inner">
+                <div class="contact-left">
+                    <div class="section-label">06 — Contact</div>
+                    <h2 class="section-heading">Travaillons <em>ensemble</em>.</h2>
+                    <p class="contact-text">
+                        Vous avez un projet e-commerce, une application web à développer, 
+                        ou vous souhaitez explorer l'IA dans votre contexte métier ? 
+                        Je suis disponible pour discuter de vos besoins.
+                    </p>
+                    <a href="mailto:gharsalah140@gmail.com" class="btn btn--primary btn--large">
+                        Envoyer un email →
+                    </a>
+                </div>
+                <div class="contact-right">
+                    <div class="contact-card">
+                        <a href="mailto:gharsalah140@gmail.com" class="contact-row">
+                            <span class="c-label">Email</span>
+                            <span class="c-value">gharsalah140@gmail.com</span>
+                        </a>
+                        <a href="tel:+212671436921" class="contact-row">
+                            <span class="c-label">Téléphone</span>
+                            <span class="c-value">+212 671 436 921</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/salah-eddine-ghar-0250b5229/" target="_blank" class="contact-row">
+                            <span class="c-label">LinkedIn</span>
+                            <span class="c-value">salah-eddine-ghar ↗</span>
+                        </a>
+                        <a href="https://github.com/salahghar" target="_blank" class="contact-row">
+                            <span class="c-label">GitHub</span>
+                            <span class="c-value">github.com/salahghar ↗</span>
+                        </a>
+                        <div class="contact-row">
+                            <span class="c-label">Localisation</span>
+                            <span class="c-value">Fès, Maroc 🇲🇦</span>
+                        </div>
+                        <div class="contact-row">
+                            <span class="c-label">Remote</span>
+                            <span class="c-value available">Disponible ✓</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2 class="section-title">Contact</h2>
-        <p class="section-subtitle">Travaillons ensemble sur votre prochain projet</p>
-        <div class="contact-container">
-            <div class="contact-grid">
-                <div class="contact-item">
-                    <div class="contact-icon">📧</div>
-                    <div class="contact-label">Email</div>
-                    <div class="contact-value">
-                        <a href="mailto:gharsalah140@gmail.com">gharsalah140@gmail.com</a>
-                    </div>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-left">
+                    <span class="footer-logo">SDG</span>
+                    <span class="footer-copy">© 2025 Salah Eddine Ghar — Tous droits réservés.</span>
                 </div>
-                <div class="contact-item">
-                    <div class="contact-icon">📱</div>
-                    <div class="contact-label">Téléphone</div>
-                    <div class="contact-value">
-                        <a href="tel:+212671436921">+212 671436921</a>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">💼</div>
-                    <div class="contact-label">LinkedIn</div>
-                    <div class="contact-value">
-                        <a href="https://www.linkedin.com/in/salah-eddine-ghar-0250b5229/" target="_blank">Salah Eddine Ghar</a>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">📍</div>
-                    <div class="contact-label">Localisation</div>
-                    <div class="contact-value">Fès, Maroc</div>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/salah-eddine-ghar-0250b5229/" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/salahghar" target="_blank">GitHub</a>
+                    <a href="mailto:gharsalah140@gmail.com">Email</a>
                 </div>
             </div>
-            <div style="text-align: center;">
-                <a href="mailto:gharsalah140@gmail.com" class="btn btn-primary">Démarrer un Projet</a>
-            </div>
         </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/salah-eddine-ghar-0250b5229/" target="_blank" class="social-link">in</a>
-            <a href="https://github.com/salahghar" target="_blank" class="social-link">gh</a>
-            <a href="mailto:gharsalah140@gmail.com" class="social-link">@</a>
-        </div>
-        <p style="color: var(--text-dim);">
-            © 2025 Salah Eddine Ghar. Tous droits réservés.
-        </p>
     </footer>
-    
+
     <script src="script.js"></script>
 </body>
 </html>
